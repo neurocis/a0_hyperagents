@@ -1,0 +1,4 @@
+name: hyper_parent_selector
+title: hyper_parent_selector
+description: HyperAgents profile: hyper_parent_selector.
+extends: hyper_base

@@ -1,0 +1,4 @@
+name: hyper_task_agent
+title: hyper_task_agent
+description: HyperAgents profile: hyper_task_agent.
+extends: hyper_base

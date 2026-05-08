@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title>HyperAgents Settings</title>
+  <script type="module">
+    import { store } from "/components/plugins/plugin-settings-store.js";
+  </script>
+</head>
+<body>
+  <div x-data>
+    <div class="settings-section">
+      <label>Project ID</label>
+      <input type="text" x-model="config.project_id" placeholder="a0-hyperagents" />
+    </div>
+    <div class="settings-section">
+      <label><input type="checkbox" x-model="config.require_sandbox" /> Require sandbox</label>
+    </div>
+    <div class="settings-section">
+      <label><input type="checkbox" x-model="config.require_human_promotion" /> Require human promotion</label>
+    </div>
+    <div class="settings-section">
+      <label>Max patch bytes</label>
+      <input type="number" x-model="config.max_patch_bytes" />
+    </div>
+  </div>
+</body>
+</html>

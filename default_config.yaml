@@ -1,0 +1,15 @@
+enabled: true
+project_id: a0-hyperagents
+require_sandbox: true
+require_human_promotion: true
+allow_network_in_sandbox: false
+max_patch_bytes: 250000
+max_generation_runtime_seconds: 3600
+storage_root: /a0/usr/plugins/a0_hyperagents/storage
+project_root: /a0/usr/projects/a0-hyperagents
+candidate_root: /a0/usr/projects/a0-hyperagents/workspaces/candidate_agents
+patch_root: /a0/usr/projects/a0-hyperagents/workspaces/patches
+archive_path: /a0/usr/plugins/a0_hyperagents/storage/archive.jsonl
+jobs_path: /a0/usr/plugins/a0_hyperagents/storage/jobs.jsonl
+runs_path: /a0/usr/plugins/a0_hyperagents/storage/runs.jsonl
+artifacts_path: /a0/usr/plugins/a0_hyperagents/storage/artifacts.jsonl

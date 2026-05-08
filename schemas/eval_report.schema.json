@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HyperAgents Eval Report",
+  "type": "object",
+  "required": ["candidate_id", "overall"],
+  "properties": {
+    "candidate_id": {"type": "string"},
+    "domains": {"type": "array", "items": {"type": "string"}},
+    "scores": {"type": "object"},
+    "overall": {"type": "number"},
+    "checks": {"type": "object"}
+  }
+}

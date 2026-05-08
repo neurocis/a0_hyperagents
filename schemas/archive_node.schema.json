@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HyperAgents Archive Node",
+  "type": "object",
+  "required": ["genid"],
+  "properties": {
+    "genid": {},
+    "parent_genid": {},
+    "created_at": {"type": "string"},
+    "valid_parent": {"type": "boolean"},
+    "can_select_next_parent": {"type": "boolean"},
+    "scores": {"type": "object"},
+    "patch_files": {"type": "array", "items": {"type": "string"}},
+    "summary": {"type": "string"}
+  }
+}

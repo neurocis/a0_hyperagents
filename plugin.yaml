@@ -1,0 +1,10 @@
+name: a0_hyperagents
+title: HyperAgents
+description: Unified HyperAgents-style self-improvement plugin for Agent Zero projects: archive, patch, eval, scheduler, sandbox, and inheritance tools.
+version: 0.1.0
+settings_sections:
+  - developer
+  - agent
+per_project_config: true
+per_agent_config: true
+always_enabled: false

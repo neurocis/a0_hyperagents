@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HyperAgents Scheduler Job",
+  "type": "object",
+  "required": ["id", "state"],
+  "properties": {
+    "id": {"type": "string"},
+    "name": {"type": "string"},
+    "kind": {"type": "string"},
+    "state": {"type": "string"},
+    "schedule": {"type": "object"},
+    "task": {"type": "object"},
+    "next_run_at": {"type": "string"}
+  }
+}

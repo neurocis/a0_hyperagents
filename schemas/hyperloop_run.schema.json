@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HyperAgents HyperLoop Run",
+  "type": "object",
+  "properties": {
+    "run_id": {"type": "string"},
+    "project": {"type": "string"},
+    "parent_id": {},
+    "candidate_id": {},
+    "state": {"type": "string"},
+    "scores": {"type": "object"}
+  }
+}

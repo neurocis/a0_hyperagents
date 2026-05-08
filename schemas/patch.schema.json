@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HyperAgents Patch",
+  "type": "object",
+  "properties": {
+    "patch_path": {"type": "string"},
+    "bytes": {"type": "integer"},
+    "empty": {"type": "boolean"},
+    "findings": {"type": "array"}
+  }
+}

@@ -1,0 +1,4 @@
+name: hyper_archivist
+title: hyper_archivist
+description: HyperAgents profile: hyper_archivist.
+extends: hyper_base

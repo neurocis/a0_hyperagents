@@ -1,0 +1,4 @@
+name: hyper_evaluator
+title: hyper_evaluator
+description: HyperAgents profile: hyper_evaluator.
+extends: hyper_base

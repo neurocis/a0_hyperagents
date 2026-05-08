@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+storage/archive.jsonl
+storage/jobs.jsonl
+storage/runs.jsonl
+storage/evals.jsonl
+storage/artifacts.jsonl
+storage/sandboxes/
+storage/nodes/gen_*/
+!storage/nodes/gen_initial/
+.toggle-0
+.toggle-1
+config.json

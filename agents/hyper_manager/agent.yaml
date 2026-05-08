@@ -1,0 +1,4 @@
+name: hyper_manager
+title: hyper_manager
+description: HyperAgents profile: hyper_manager.
+extends: hyper_base

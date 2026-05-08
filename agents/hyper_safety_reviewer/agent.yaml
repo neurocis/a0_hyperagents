@@ -1,0 +1,4 @@
+name: hyper_safety_reviewer
+title: hyper_safety_reviewer
+description: HyperAgents profile: hyper_safety_reviewer.
+extends: hyper_base

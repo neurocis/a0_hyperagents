@@ -1,0 +1,4 @@
+name: hyper_meta_agent
+title: hyper_meta_agent
+description: HyperAgents profile: hyper_meta_agent.
+extends: hyper_base
