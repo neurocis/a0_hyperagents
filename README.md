@@ -336,3 +336,51 @@ Spawn them with the `a0_superordinates` plugin and have each one use only the `h
 - `promote_patch` defaults to `dry_run: true`
 
 Do not relax these without an explicit project decision and a documented rollback plan.
+
+## Acknowledgements & References
+
+This plugin is **inspired by** prior work on hyperagent / Darwin Gödel Machine-style self-improving agent systems. The Agent Zero implementation here is an independent design built natively against Agent Zero's projects, profiles, plugins, persistent superordinates, and scheduler primitives — it is **not** a port of the upstream code and does not redistribute any of it. Full credit for the underlying ideas and the reference implementation goes to the original authors.
+
+### Upstream sources
+
+| Resource | Link |
+|---|---|
+| Reference implementation | [`facebookresearch/HyperAgents`](https://github.com/facebookresearch/HyperAgents) |
+| White paper (PDF) | [arXiv:2603.19461](https://arxiv.org/pdf/2603.19461) |
+| Paper landing page | [arxiv.org/abs/2603.19461](https://arxiv.org/abs/2603.19461) |
+
+### How upstream concepts map into this plugin
+
+| Upstream concept | This plugin |
+|---|---|
+| `generate_loop.py` (open-ended self-improvement loop) | `hyperagents_scheduler` durable jobs + the manual HyperLoop sequence in [Section 4 of "How to use this plugin"](#4-run-one-hyperloop-generation-manually) |
+| `meta_agent.py` (proposes self-modifications) | `hyper_meta_agent` profile + `hyperagents_patch.create_candidate_workspace` / `capture_diff` |
+| `task_agent.py` (solves domain tasks) | `hyper_task_agent` profile + `hyperagents_eval.run_eval_suite` |
+| `select_next_parent.py` (parent selection over the archive) | `hyperagents_archive.select_parent` (`random_valid_parent`, `latest`, `best_overall`) |
+| `utils/gl_utils.py` (archive of generations) | `hyperagents_archive` + `storage/archive.jsonl` + `storage/nodes/gen_<id>/` |
+| `utils/git_utils.py` (diff/patch/reset) | `hyperagents_patch` (git-baselined candidate workspaces, `validate_patch`, `promote_patch`) |
+| `utils/docker_utils.py` (sandboxed evaluation) | `hyperagents_sandbox` (`validate_candidate`, secret/protected-path scanners) |
+| `domains/harness.py` + `domains/report.py` | `hyperagents_eval` (heuristic MVP scoring + report writer) |
+
+### Citation
+
+If this plugin is useful in your work, please cite the original paper rather than this plugin:
+
+```bibtex
+@article{hyperagents2026,
+  title  = {HyperAgents},
+  author = {Original authors as listed on the arXiv paper},
+  year   = {2026},
+  eprint = {2603.19461},
+  archivePrefix = {arXiv},
+  url    = {https://arxiv.org/abs/2603.19461}
+}
+```
+
+Replace the `author` field with the canonical author list from the arXiv page above when citing.
+
+### Trademarks and licensing
+
+- The name **HyperAgents** and the upstream codebase are the property of their respective authors and Meta Platforms, Inc. (Facebook AI Research). This plugin is not affiliated with, endorsed by, or sponsored by Meta or the original authors.
+- This plugin (`a0_hyperagents`) is released under the [MIT License](LICENSE).
+- The upstream repository [`facebookresearch/HyperAgents`](https://github.com/facebookresearch/HyperAgents) is licensed under its own terms; consult its `LICENSE.md` before reusing its code or assets.
